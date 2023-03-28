@@ -43,7 +43,9 @@ function renderVideoCard(elem: SlateElement, children: VNode[] | null, editor: I
     )
     itemNode.push(item)
   }
-
+  const style = {
+    'justify-items': itemNode.length > 1 ? 'center' : 'start',
+  }
   // 主容器
   const vnode = h(
     'div',
@@ -52,6 +54,7 @@ function renderVideoCard(elem: SlateElement, children: VNode[] | null, editor: I
         contentEditable: false,
         className: 'w-e-textarea-video-card-container',
       },
+      style: style,
       dataset: {
         selected: selected ? 'true' : '', // 标记为 选中
       },
