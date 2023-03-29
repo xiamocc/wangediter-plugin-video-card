@@ -29,7 +29,11 @@ function renderVideoCard(elem: SlateElement, children: VNode[] | null, editor: I
         },
         on: {
           click: e => {
-            const url = (e.target as HTMLElement).dataset.url
+            let target = e.target as HTMLElement
+            if (target.className === 'w-e-textarea-video-card-item-img') {
+              target = target.parentNode as HTMLElement
+            }
+            const url = target.dataset.url
             editor.emit('clickVideoCard', url)
           },
         },

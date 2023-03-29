@@ -21,11 +21,11 @@
   "module": "dist/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "test": "cross-env NODE_OPTIONS=--unhandled-rejections=warn jest --detectOpenHandles --passWithNoTests",
-    "test-c": "cross-env NODE_OPTIONS=--unhandled-rejections=warn jest --coverage",
     "dev": "cross-env NODE_ENV=development webpack serve --config build/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js",
     "build:analyzer": "cross-env NODE_ENV=production_analyzer webpack --config build/webpack.prod.js",
+    "test": "cross-env NODE_OPTIONS=--unhandled-rejections=warn jest --detectOpenHandles --passWithNoTests",
+    "test-c": "cross-env NODE_OPTIONS=--unhandled-rejections=warn jest --coverage",
     "release": "release-it",
     "format": "yarn prettier --write",
     "lint": "eslint \"{src,test,cypress,build,example}/**/*.{js,ts}\"",
