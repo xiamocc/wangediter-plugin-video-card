@@ -47,9 +47,12 @@ function renderVideoCard(elem: SlateElement, children: VNode[] | null, editor: I
     )
     itemNode.push(item)
   }
+  const ilength = itemNode.length
   const style = {
     'justify-items': itemNode.length > 1 ? 'center' : 'start',
+    width: `calc(${450 * ilength}px + ${20 * ilength}px)`,
   }
+
   // 主容器
   const vnode = h(
     'div',
