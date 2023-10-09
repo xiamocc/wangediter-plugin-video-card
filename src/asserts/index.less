@@ -9,11 +9,26 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   // justify-items: center;
   position: relative;
+  overflow: hidden;
+}
+
+&::-webkit-scrollbar {
+  width: 7px !important;
+  height: 7px !important;
+}
+
+&::-webkit-scrollbar-thumb {
+  background: rgb(205, 205, 205) !important;
+  border-radius: calc(3.5px) !important;
+}
+
+&::-webkit-scrollbar-track {
+  background: rgba(240, 240, 240, 0) !important;
 }
 
 .w-e-textarea-video-card-item {
   border-radius: 8px;
-  width: 80%;
+  width: 100%;
   max-width: 450px;
   max-height: 150px;
   aspect-ratio: 4 / 3;
